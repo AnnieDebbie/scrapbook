@@ -1,0 +1,27 @@
+.main_containter {
+  box-shadow: 0px 16px 24px 0px #120f130a;
+}
+
+.spinner {
+  animation: spinner 1s linear infinite;
+}
+
+.el-select__placeholder {
+  font-size: 12px !important;
+}
+
+.dp__range_end,
+.dp__range_start,
+.dp__active_date {
+  background: #360e54 !important;
+}
+
+.dp__action_buttons .dp__action_select {
+  background: #360e54 !important;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
