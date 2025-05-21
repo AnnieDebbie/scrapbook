@@ -1,6 +1,8 @@
 <template>
   <section
-    class="min-h-screen py-12 overflow-hidden opacity-0 animate-fade-in delay-200ms"
+    v-show="!flipped"
+    class="min-h-screen py-12 overflow-hidden opacity-0 animate-fade-in delay-200ms perspective"
+    :class="flipped ? 'animate-page-flip' : ''"
   >
     <section
       class="flex items-center justify-between container mx-auto opacity-0 animate-fade-in delay-[5000ms]"
@@ -90,6 +92,7 @@
           class="grid grid-cols-2 md:flex md:justify-center mt-10 gap-3 text-[#2F2E2E] font-caveat text-xl font-bold leading-[22.882px] text-shadow-[0px_4.192px_10.481px_rgba(0,0,0,0.12)]"
         >
           <PolaroidCard
+            @click="flipped = true"
             image="/images/home-image-1.jpeg"
             caption="...being my favorite person!"
             imgClass="max-w-[372.174px] h-[248.146px] "
@@ -100,6 +103,7 @@
           />
 
           <PolaroidCard
+            @click="flipped = true"
             image="/images/home-image-2.png"
             caption="...helping me believe in magic "
             imgClass="min-w-[180.174px] max-w-[372.174px]  h-[248.146px]"
@@ -110,6 +114,7 @@
           />
 
           <PolaroidCard
+            @click="flipped = true"
             image="/images/home-image-4.png"
             caption="...being my supporter & safe space "
             imgClass="max-w-[200.174px] h-[248.146px]"
@@ -120,6 +125,7 @@
           />
 
           <PolaroidCard
+            @click="flipped = true"
             image="/images/home-image-1.jpeg"
             caption="...the hugs, cuddles & forehead kisses"
             imgClass="max-w-[372.174px] h-[248.146px] "
@@ -149,12 +155,150 @@
       </div>
     </div>
   </section>
+
+  <section
+    v-show="flipped"
+    class="min-h-screen pb-12 pt-8 overflow-hidden opacity-0 animate-fade-in delay-200ms"
+  >
+    <section class="flex justify-between px-6 relative">
+      <div class="opacity-0 animate-fade-in delay-[400ms] mt-3">
+        <p
+          class="font-caveat text-[34.075px] font-bold leading-[38.164px] text-[#464646] text-shadow-[0px_5.73px_14.324px_rgba(0,0,0,0.12)] rotate-[-2deg]"
+        >
+          You make me laugh, even on my worst days
+        </p>
+      </div>
+
+      <div
+        class="pt-8 pb-10 bg-[url('/images/torn-paper.png')] bg-no-repeat bg-contain z-10 font-caveat w-full max-w-[650px] absolute -top-8 right-[15%]"
+      >
+        <p
+          class="text-3xl underline leading-snug w-[57%] mx-auto text-[#545454] font-normal"
+        >
+          two hearts that <br />
+          beat as one
+        </p>
+      </div>
+    </section>
+
+    <div
+      class="px-20 grid grid-cols-2 md:flex mt-10 gap-40 text-[#2F2E2E] font-caveat text-xl font-bold leading-[22.882px] text-shadow-[0px_4.192px_10.481px_rgba(0,0,0,0.12)]"
+    >
+      <PolaroidCard
+        @click="flipped = true"
+        image="/images/home-image-1.jpeg"
+        caption="...being my favorite person!"
+        imgClass="max-w-[372.174px] h-[248.146px] "
+        containerClass="cursor-pointer opacity-0 animate-fade-in delay-[600ms] z-40 mt-20"
+        polaroidClass="rotate-[-10deg]"
+        captionClass=" "
+        :baseDelay="600"
+      />
+      <PolaroidCard
+        @click="flipped = true"
+        image="/images/home-image-1.jpeg"
+        caption="...being my favorite person!"
+        imgClass="max-w-[372.174px] h-[248.146px] "
+        containerClass="cursor-pointer opacity-0 animate-fade-in delay-[600ms] z-40 mt-20"
+        polaroidClass="rotate-[12deg]"
+        captionClass=" "
+        :baseDelay="600"
+      />
+
+      <PolaroidCard
+        @click="flipped = true"
+        image="/images/home-image-4.png"
+        caption="...being my supporter & safe space "
+        imgClass="max-w-[200.174px] h-[248.146px]"
+        containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3500ms] z-20"
+        polaroidClass="rotate-[-5deg] -ml-7"
+        captionClass=""
+        :baseDelay="3500"
+      />
+
+      <div class="flex">
+        <PolaroidCard
+          @click="flipped = true"
+          image="/images/home-image-4.png"
+          caption="...being my supporter & safe space "
+          imgClass="max-w-[200.174px] h-[248.146px]"
+          containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3500ms] z-20"
+          polaroidClass="rotate-[-5deg] -ml-7"
+          captionClass=""
+          :baseDelay="3500"
+        />
+
+        <p class="text-[29.99px] font-normal leading-[112%]">
+          You make me feel seen, loved and
+          <span class="text-[#9F5A5A]">valued </span>
+        </p>
+      </div>
+    </div>
+    <div
+      class="px-20 grid grid-cols-2 md:flex mt-10 gap-40 text-[#2F2E2E] font-caveat text-xl font-bold leading-[22.882px] text-shadow-[0px_4.192px_10.481px_rgba(0,0,0,0.12)]"
+    >
+      <div class="flex">
+        <PolaroidCard
+          @click="flipped = true"
+          image="/images/home-image-4.png"
+          caption="...being my supporter & safe space "
+          imgClass="max-w-[200.174px] h-[248.146px]"
+          containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3500ms] z-20"
+          polaroidClass="rotate-[-5deg] -ml-7"
+          captionClass=""
+          :baseDelay="3500"
+        />
+
+        <p class="text-[29.99px] font-normal leading-[112%] text-[#691313]">
+          You love me in a way that feels like a warm hug on a cold day
+        </p>
+      </div>
+      <div class="flex">
+        <PolaroidCard
+          @click="flipped = true"
+          image="/images/home-image-4.png"
+          caption="...being my supporter & safe space "
+          imgClass="max-w-[200.174px] h-[248.146px]"
+          containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3500ms] z-20"
+          polaroidClass="rotate-[-5deg] -ml-7"
+          captionClass=""
+          :baseDelay="3500"
+        />
+
+        <p class="text-[29.99px] font-normal leading-[112%] text-black">
+          Thank you for the small things and making my heart feel at home
+        </p>
+      </div>
+      <div class="flex">
+        <PolaroidCard
+          @click="flipped = true"
+          image="/images/home-image-4.png"
+          caption="...being my supporter & safe space "
+          imgClass="max-w-[200.174px] h-[248.146px]"
+          containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3500ms] z-20"
+          polaroidClass="rotate-[-5deg] -ml-7"
+          captionClass=""
+          :baseDelay="3500"
+        />
+
+        <p class="text-[29.99px] font-normal leading-[112%] text-[#674A4A]">
+          I love your calm voice
+        </p>
+      </div>
+    </div>
+  </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const flipped = ref(false);
+</script>
 
 <style>
 .bg-cream {
   background-color: #fdf6ef;
+}
+
+.perspective {
+  perspective: 2000px;
 }
 </style>

@@ -90,6 +90,30 @@ module.exports = {
           "50%": { transform: "scale(0.9)" },
           "75%": { transform: "scale(1.1)" },
         },
+        "page-flip": {
+          "0%": {
+            transform: "rotateY(0deg)",
+            transformOrigin: "left",
+            opacity: 1,
+          },
+          "100%": {
+            transform: "rotateY(-180deg)",
+            transformOrigin: "left",
+            opacity: 0,
+          },
+        },
+        "page-unflip": {
+          "0%": {
+            transform: "rotateY(-180deg)",
+            transformOrigin: "left",
+            opacity: 0,
+          },
+          "100%": {
+            transform: "rotateY(0deg)",
+            transformOrigin: "left",
+            opacity: 1,
+          },
+        },
       },
       animation: {
         "polaroid-entry": "polaroid-entry 1s ease-out forwards",
@@ -99,6 +123,8 @@ module.exports = {
         "fade-in": "fade-in 1s ease-out forwards",
         "transparent-fade-in": "transparent-fade-in 1s ease-out forwards",
         heartbeat: "heartbeat 1.2s ease-in-out infinite",
+        "page-flip": "page-flip 1s ease-in-out forwards",
+        "page-unflip": "page-unflip 1s ease-in-out forwards",
       },
     },
   },
