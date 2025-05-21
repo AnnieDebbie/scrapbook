@@ -103,7 +103,7 @@
       <div class="opacity-0 animate-drop-in delay-[2800ms]">
         <PolaroidCard
           @click="flipped = true"
-          image="/images/home-image-1.jpeg"
+          image="/images/notes-img-1.jpeg"
           imgClass="max-w-[372.174px] h-[248.146px] "
           containerClass="cursor-pointer delay-[2800ms] z-40 mt-20"
           polaroidClass="rotate-[-10deg]"
@@ -115,7 +115,7 @@
       <div class="opacity-0 animate-drop-in delay-[3800ms]">
         <PolaroidCard
           @click="flipped = true"
-          image="/images/home-image-4.png"
+          image="/images/notes-img-2.jpeg"
           imgClass="max-w-[200.174px] h-[248.146px]"
           containerClass="cursor-pointer delay-[3800ms] z-20"
           polaroidClass="rotate-[5deg] "
@@ -127,7 +127,7 @@
       <div class="opacity-0 animate-fade-in delay-[6000ms]">
         <PolaroidCard
           @click="flipped = true"
-          image="/images/home-image-1.jpeg"
+          image="/images/notes-img-3.jpeg"
           imgClass="max-w-[372.174px] h-[248.146px] "
           containerClass="cursor-pointer delay-[6000ms] z-40 mt-20"
           polaroidClass="rotate-[12deg]"
@@ -139,7 +139,7 @@
       <div class="opacity-0 animate-fade-in delay-[7100ms]">
         <PolaroidCard
           @click="flipped = true"
-          image="/images/home-image-4.png"
+          image="/images/notes-img-4.jpeg"
           imgClass="max-w-[200.174px] h-[248.146px]"
           containerClass="cursor-pointer delay-[7100ms] z-20"
           polaroidClass="rotate-[-5deg] -ml-7"
@@ -155,11 +155,7 @@
 import { inject, onMounted } from "vue";
 
 const pageEntered = inject("pageEntered");
-const images = [
-  { id: 1, src: "img1.jpg", caption: "First trip" },
-  { id: 2, src: "img2.jpg", caption: "Cuddles!" },
-  { id: 3, src: "img3.jpg", caption: "Our song" },
-];
+
 const fullText = `Here's to US, yesterday, today and tomorrow...`;
 const displayedText = ref("");
 const showCursor = ref(true);

@@ -186,7 +186,7 @@ module.exports = {
         "leaf-fall": "leaf-fall 2.5s cubic-bezier(.4,2,.6,1) forwards",
         bloom: "bloom 1.2s cubic-bezier(.4,2,.6,1) forwards",
         blink: "blink 1s steps(1) infinite",
-        "kiss-peck": "kissPeck 1.2s cubic-bezier(.4,2,.6,1) 1",
+        "kiss-peck": "kissPeck 1.2s cubic-bezier(.4,2,.6,1) 4",
         "heart-float": "heartFloat 1.2s 0.6s forwards",
       },
     },
