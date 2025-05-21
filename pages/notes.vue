@@ -56,34 +56,36 @@
       </p>
 
       <div
-        class="opacity-0 animate-fade-in delay-[2600ms] text-black text-[31.643px] font-normal leading-[53.16px]"
+        v-if="typingDone"
+        class="text-black text-2xl font-normal leading-[48px]"
       >
         <p class="opacity-0 animate-fade-in delay-[2800ms]">
           From the first time we had a deep conversation, I knew we had
           something special.
         </p>
 
-        <p class="opacity-0 animate-fade-in delay-[3500ms]">
+        <p class="opacity-0 animate-fade-in delay-[3800ms]">
           Looking back, I'm so grateful for every adventure, every laugh, every
           challenge, and every quiet moment we've shared.
         </p>
-        <p class="opacity-0 animate-fade-in delay-[4200ms]">
+        <p class="opacity-0 animate-fade-in delay-[4800ms]">
           I can't wait for the endless tomorrows, the memories we'll make, and
           the love we'll continue to build.
         </p>
 
-        <p class="opacity-0 animate-fade-in delay-[4800ms]">
+        <p class="opacity-0 animate-fade-in delay-[6000ms]">
           Here's to us – to loving harder, laughing louder, and growing stronger
           together.
         </p>
 
-        <p class="opacity-0 animate-fade-in delay-[5300ms]">
+        <p class="opacity-0 animate-fade-in delay-[7700ms]">
           Happy Birthday, My Love.
         </p>
       </div>
 
       <p
-        class="opacity-0 animate-float-up delay-[5500ms] font-sister text-[#CA112C] text-[36.189px] font-normal mt-4 flex items-center"
+        v-if="typingDone"
+        class="opacity-0 animate-float-up delay-[8000ms] font-sister text-[#CA112C] text-[36.189px] font-normal mt-4 flex items-center"
       >
         <span>
           Forever Yours, <br />
@@ -95,46 +97,56 @@
     </article>
 
     <div
-      class="grid grid-cols-2 mt-10 text-[#2F2E2E] font-caveat text-xl font-bold leading-[22.882px] text-shadow-[0px_4.192px_10.481px_rgba(0,0,0,0.12)] opacity-0 animate-fade-in"
+      v-if="typingDone"
+      class="grid grid-cols-2 text-[#2F2E2E] font-caveat text-xl font-bold leading-[22.882px] text-shadow-[0px_4.192px_10.481px_rgba(0,0,0,0.12)]"
     >
-      <PolaroidCard
-        @click="flipped = true"
-        image="/images/home-image-1.jpeg"
-        imgClass="max-w-[372.174px] h-[248.146px] "
-        containerClass="cursor-pointer delay-[2800ms] z-40 mt-20"
-        polaroidClass="rotate-[-10deg]"
-        captionClass=" "
-        :baseDelay="2800"
-      />
-      <PolaroidCard
-        @click="flipped = true"
-        image="/images/home-image-1.jpeg"
-        imgClass="max-w-[372.174px] h-[248.146px] "
-        containerClass="cursor-pointer delay-[4200ms] z-40 mt-20"
-        polaroidClass="rotate-[12deg]"
-        captionClass=" "
-        :baseDelay="4200"
-      />
+      <div class="opacity-0 animate-drop-in delay-[2800ms]">
+        <PolaroidCard
+          @click="flipped = true"
+          image="/images/home-image-1.jpeg"
+          imgClass="max-w-[372.174px] h-[248.146px] "
+          containerClass="cursor-pointer delay-[2800ms] z-40 mt-20"
+          polaroidClass="rotate-[-10deg]"
+          captionClass=" "
+          :baseDelay="2800"
+        />
+      </div>
 
-      <PolaroidCard
-        @click="flipped = true"
-        image="/images/home-image-4.png"
-        imgClass="max-w-[200.174px] h-[248.146px]"
-        containerClass="cursor-pointer delay-[4800ms] z-20"
-        polaroidClass="rotate-[-5deg] -ml-7"
-        captionClass=""
-        :baseDelay="4800"
-      />
+      <div class="opacity-0 animate-drop-in delay-[3800ms]">
+        <PolaroidCard
+          @click="flipped = true"
+          image="/images/home-image-4.png"
+          imgClass="max-w-[200.174px] h-[248.146px]"
+          containerClass="cursor-pointer delay-[3800ms] z-20"
+          polaroidClass="rotate-[5deg] "
+          captionClass=""
+          :baseDelay="3800"
+        />
+      </div>
 
-      <PolaroidCard
-        @click="flipped = true"
-        image="/images/home-image-4.png"
-        imgClass="max-w-[200.174px] h-[248.146px]"
-        containerClass="cursor-pointer delay-[3500ms] z-20"
-        polaroidClass="rotate-[-5deg] -ml-7"
-        captionClass=""
-        :baseDelay="3500"
-      />
+      <div class="opacity-0 animate-fade-in delay-[6000ms]">
+        <PolaroidCard
+          @click="flipped = true"
+          image="/images/home-image-1.jpeg"
+          imgClass="max-w-[372.174px] h-[248.146px] "
+          containerClass="cursor-pointer delay-[6000ms] z-40 mt-20"
+          polaroidClass="rotate-[12deg]"
+          captionClass=" "
+          :baseDelay="6000"
+        />
+      </div>
+
+      <div class="opacity-0 animate-fade-in delay-[7100ms]">
+        <PolaroidCard
+          @click="flipped = true"
+          image="/images/home-image-4.png"
+          imgClass="max-w-[200.174px] h-[248.146px]"
+          containerClass="cursor-pointer delay-[7100ms] z-20"
+          polaroidClass="rotate-[-5deg] -ml-7"
+          captionClass=""
+          :baseDelay="7100"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -151,6 +163,7 @@ const images = [
 const fullText = `Here's to US, yesterday, today and tomorrow...`;
 const displayedText = ref("");
 const showCursor = ref(true);
+const typingDone = ref(false);
 
 onMounted(() => {
   setTimeout(() => {
@@ -158,7 +171,10 @@ onMounted(() => {
     const interval = setInterval(() => {
       displayedText.value += fullText[i];
       i++;
-      if (i >= fullText.length) clearInterval(interval);
+      if (i >= fullText.length) {
+        clearInterval(interval);
+        typingDone.value = true;
+      }
     }, 40);
     setInterval(() => (showCursor.value = !showCursor.value), 500);
   }, 1800);
