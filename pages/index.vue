@@ -1,5 +1,7 @@
 <template>
+  <WelcomeModal @done="startMainAnimations" />
   <section
+    v-show="!showModal"
     class="min-h-screen py-12 overflow-hidden opacity-0 animate-fade-in delay-200ms"
   >
     <section
