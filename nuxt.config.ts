@@ -24,14 +24,7 @@ export default defineNuxtConfig({
 
   modules: [
     // "@nuxtjs/tailwindcss",
-    "shadcn-nuxt",
-    "@pinia/nuxt",
-    "@vee-validate/nuxt",
-    "nuxt3-localforage",
-    "nuxt-lodash",
-    "@element-plus/nuxt",
-    "nuxt-lucide-icons",
-    "@nuxt/image",
+
     "@nuxtjs/google-fonts",
   ],
 
@@ -57,18 +50,6 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-
-  shadcn: {
-    /**
-     * Prefix for all the imported component
-     */
-    prefix: "",
-    /**
-     * Directory that the component lives in.
-     * @default "./components/ui"
-     */
-    componentDir: "./components/ui",
-  },
 
   vue: {
     runtimeCompiler: true,
