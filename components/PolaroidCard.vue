@@ -1,7 +1,5 @@
 <template>
   <div :class="`${containerClass} relative w-max h-auto`">
-    <!-- Tape -->
-
     <div
       :class="`${polaroidClass} relative bg-white shadow-xl p-4 transform origin-top w-max h-max animate-polaroid-entry`"
     >
@@ -17,7 +15,7 @@
     </div>
 
     <div
-      class="absolute -top-4 left-1/2 -translate-x-1/2 w-[70px] h-[20px] bg-[#E5D1A9] opacity-70 rounded-sm shadow-md rotate-[-40deg] z-20 opacity-0 animate-fade-in animate-tape-drop"
+      class="absolute -top-4 left-1/2 -translate-x-1/2 w-[70px] h-[20px] bg-[#E5D1A9] rounded-sm shadow-md rotate-[-40deg] z-20 opacity-0 animate-transparent-fade-in animate-tape-drop"
       :style="{ animationDelay: tapeDelay }"
     ></div>
   </div>

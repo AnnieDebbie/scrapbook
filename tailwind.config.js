@@ -79,6 +79,10 @@ module.exports = {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
+        "transparent-fade-in": {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 0.7 },
+        },
 
         heartbeat: {
           "0%, 100%": { transform: "scale(1)" },
@@ -93,6 +97,7 @@ module.exports = {
         "fly-across": "fly-across 5s ease-in-out infinite",
         "drop-in": "drop-in 0.8s ease-out forwards",
         "fade-in": "fade-in 1s ease-out forwards",
+        "transparent-fade-in": "transparent-fade-in 1s ease-out forwards",
         heartbeat: "heartbeat 1.2s ease-in-out infinite",
       },
     },
