@@ -15,6 +15,7 @@
     </div>
 
     <div
+      :class="tapeClass"
       class="absolute -top-4 left-1/2 -translate-x-1/2 w-[70px] h-[20px] bg-[#E5D1A9] rounded-sm shadow-md rotate-[-40deg] z-20 opacity-0 animate-transparent-fade-in animate-tape-drop"
       :style="{ animationDelay: tapeDelay }"
     ></div>
@@ -29,6 +30,7 @@ const props = defineProps({
   containerClass: String,
   polaroidClass: String,
   captionClass: String,
+  tapeClass: String,
   baseDelay: {
     type: Number,
     default: 0,
