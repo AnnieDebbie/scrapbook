@@ -33,6 +33,7 @@ export default defineNuxtConfig({
       Caveat: [300, 400, 500, 700],
       "Patrick+Hand": true,
       "Akaya+Kanadaka": [300, 400, 500, 700],
+      "Love+Ya+Like+A+Sister": [400],
     },
     display: "swap",
   },

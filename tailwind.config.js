@@ -43,6 +43,7 @@ module.exports = {
         caveat: ["Caveat", "cursive"],
         handwritten: ['"Patrick Hand"', "cursive"],
         akaya: ['"Akaya Kanadaka"', "system-ui"],
+        sister: ['"Love Ya Like A Sister"', "cursive"],
       },
 
       keyframes: {
@@ -130,6 +131,45 @@ module.exports = {
             opacity: 1,
           },
         },
+        sway: {
+          "0%": { transform: "rotate(-4deg)" },
+          "50%": { transform: "rotate(4deg)" },
+          "100%": { transform: "rotate(-4deg)" },
+        },
+
+        "leaf-fall": {
+          "0%": {
+            transform: "translateY(0) translateX(0) rotate(0deg)",
+            opacity: "1",
+          },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "translateY(200px) translateX(60px) rotate(40deg)",
+            opacity: "0",
+          },
+        },
+
+        bloom: {
+          "0%": { transform: "scale(0.6)", opacity: "0" },
+          "80%": { transform: "scale(1.1)", opacity: "1" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+
+        blink: {
+          "0%,100%": { opacity: "1" },
+          "50%": { opacity: "0" },
+        },
+        kissPeck: {
+          "0%": { transform: "scale(1) rotate(-8deg)", opacity: "1" },
+          "30%": { transform: "scale(1.2) rotate(0deg)", opacity: "1" },
+          "60%": { transform: "scale(1) rotate(8deg)", opacity: "1" },
+          "100%": { transform: "scale(0.7) translateY(-40px)", opacity: "0" },
+        },
+        heartFloat: {
+          "0%": { opacity: "0", transform: "scale(0.5) translateY(0)" },
+          "30%": { opacity: "1", transform: "scale(1.2) translateY(-10px)" },
+          "100%": { opacity: "0", transform: "scale(1) translateY(-60px)" },
+        },
       },
       animation: {
         "polaroid-entry": "polaroid-entry 1s ease-out forwards",
@@ -142,6 +182,12 @@ module.exports = {
         "page-flip": "page-flip 1s ease-in-out forwards",
         "page-unflip": "page-unflip 1s ease-in-out forwards",
         "float-up": "float-up 1s ease-out forwards",
+        sway: "sway 3s ease-in-out infinite",
+        "leaf-fall": "leaf-fall 2.5s cubic-bezier(.4,2,.6,1) forwards",
+        bloom: "bloom 1.2s cubic-bezier(.4,2,.6,1) forwards",
+        blink: "blink 1s steps(1) infinite",
+        "kiss-peck": "kissPeck 1.2s cubic-bezier(.4,2,.6,1) 1",
+        "heart-float": "heartFloat 1.2s 0.6s forwards",
       },
     },
   },

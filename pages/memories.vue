@@ -4,7 +4,7 @@
       <img src="/images/clipped-newspaper.png" class="w-[500px] z-10" />
       <img
         src="/images/leaves.png"
-        class="max-w-[300px] z-20 absolute top-4 right-24"
+        class="max-w-[300px] z-20 absolute top-4 right-24 animate-sway delay-[1200ms]"
       />
     </div>
     <div
@@ -132,7 +132,7 @@
             I love your calm voice
           </p>
 
-          <div class="absolute -top-16 -right-20 w-[145px]">
+          <div class="absolute -top-16 -right-19 w-[145px]">
             <img src="/images/memories-img-eight.png" alt="" />
           </div>
         </div>
@@ -143,7 +143,27 @@
       <div
         class="absolute -top-[270px] w-[313.639px] h-[810.116px] left-[-40px] opacity-0 animate-fade-in delay-[4800ms]"
       >
-        <img src="/images/flower.png" alt="" />
+        <img
+          src="/images/flower.png"
+          alt=""
+          class="opacity-0 animate-bloom delay-[5000ms]"
+        />
+      </div>
+      <div
+        class="absolute -top-[270px] w-[313.639px] h-[810.116px] left-[-40px] opacity-0 animate-fade-in delay-[5200ms]"
+      >
+        <router-link to="/notes" class="fixed bottom-0 right-0 z-50">
+          <div class="relative w-20 h-20 cursor-pointer group">
+            <div
+              class="absolute bottom-0 right-0 w-20 h-20 bg-[#F5EED8] rounded-tr-3xl shadow-lg group-hover:bg-yellow-300 transition-colors duration-300"
+            ></div>
+            <span
+              class="absolute bottom-2 right-4 font-caveat text-lg text-pink-700 rotate-[-10deg] group-hover:underline"
+            >
+              Next Page
+            </span>
+          </div>
+        </router-link>
       </div>
     </div>
   </section>
