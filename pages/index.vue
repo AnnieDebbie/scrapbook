@@ -3,7 +3,7 @@
     class="min-h-screen py-12 overflow-hidden opacity-0 animate-fade-in delay-200ms"
   >
     <section
-      class="flex items-center justify-between container mx-auto opacity-0 animate-fade-in delay-[20000ms]"
+      class="flex items-center justify-between container mx-auto opacity-0 animate-fade-in delay-[5000ms]"
     >
       <div class="rotate-[-7deg] mb-6 flex items-center">
         <p
@@ -15,7 +15,7 @@
           <img
             src="/images/airplane.svg"
             alt="airplane"
-            class="animate-fly-across"
+            class="animate-fly-across delay-[5500ms]"
           />
         </div>
       </div>
@@ -70,7 +70,7 @@
 
       <section class="flex items-center px-[2%]">
         <div
-          class="flex items-center gap-4 rotate-[-7deg] mr-3 opacity-0 animate-fade-in delay-[1800ms]"
+          class="flex items-center gap-4 rotate-[-7deg] mr-8 opacity-0 animate-fade-in delay-[1800ms]"
         >
           <img
             class="animate-heartbeat delay-[2000ms]"
@@ -89,50 +89,58 @@
         <div
           class="grid grid-cols-2 md:flex md:justify-center mt-10 gap-3 text-[#2F2E2E] font-caveat text-xl font-bold leading-[22.882px] text-shadow-[0px_4.192px_10.481px_rgba(0,0,0,0.12)]"
         >
-          <div class="animate-polaroid-entry delay-[3000ms]">
-            <PolaroidCard
-              image="/images/home-image-1.jpeg"
-              caption="...being my favorite person!"
-              imgClass="max-w-[372.174px] h-[248.146px] "
-              containerClass="rotate-[10deg] cursor-pointer  "
-              captionClass=" "
-            />
-          </div>
-          <!-- <div class="animate-tape-drop delay-[3300ms]"> -->
+          <PolaroidCard
+            image="/images/home-image-1.jpeg"
+            caption="...being my favorite person!"
+            imgClass="max-w-[372.174px] h-[248.146px] "
+            containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3000ms] z-40"
+            polaroidClass="rotate-[11deg]"
+            captionClass=" "
+            :baseDelay="3000"
+          />
+
           <PolaroidCard
             image="/images/home-image-2.png"
             caption="...helping me believe in magic "
-            imgClass="min-w-[180.174px] max-w-[372.174px]  h-[248.146px] "
-            containerClass="rotate-[5deg] -ml-2 z-[10] delay-[3300ms] cursor-pointer"
+            imgClass="min-w-[180.174px] max-w-[372.174px]  h-[248.146px]"
+            containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3300ms] z-30"
+            polaroidClass="rotate-[7deg] -ml-4"
             captionClass=" "
+            :baseDelay="3300"
           />
-          <!-- </div> -->
 
-          <!-- <div class="animate-tape-drop delay-[3600ms]"> -->
           <PolaroidCard
             image="/images/home-image-4.png"
             caption="...being my supporter & safe space "
-            imgClass="max-w-[200.174px] h-[248.146px] "
-            containerClass="rotate-[-4deg] "
+            imgClass="max-w-[200.174px] h-[248.146px]"
+            containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3500ms] z-20"
+            polaroidClass="rotate-[-5deg] -ml-7"
             captionClass=""
+            :baseDelay="3500"
           />
-          <!-- </div> -->
+
           <PolaroidCard
             image="/images/home-image-1.jpeg"
             caption="...the hugs, cuddles & forehead kisses"
             imgClass="max-w-[372.174px] h-[248.146px] "
-            containerClass="rotate-[-10deg] "
+            containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3700ms] z-10"
+            polaroidClass="rotate-[-10deg] "
             captionClass=""
+            :baseDelay="3700"
           />
         </div>
       </section>
     </div>
 
     <div class="relative">
-      <div class="absolute -top-[100px] w-[313.639px] h-[810.116px] left-0">
+      <div
+        class="absolute -top-[100px] w-[313.639px] h-[810.116px] left-0 opacity-0 animate-fade-in delay-[4000ms]"
+      >
         <img src="/images/home-page-footer-img-1.png" alt="" />
       </div>
-      <div class="absolute -top-[100px] w-[313.639px] h-[810.116px] right-0">
+      <div
+        class="absolute -top-[100px] w-[313.639px] h-[810.116px] right-0 opacity-0 animate-fade-in delay-[4300ms]"
+      >
         <img
           class="overflow-hidden"
           src="/images/home-page-footer-img-2.png"

@@ -47,9 +47,8 @@ module.exports = {
 
       keyframes: {
         "polaroid-entry": {
-          "0%": { opacity: "0", transform: "translateY(-60px) rotate(-6deg)" },
-          "50%": { opacity: "1", transform: "translateY(15px) rotate(4deg)" },
-          "100%": { transform: "translateY(0px) rotate(-2deg)" },
+          "0%": { opacity: 0, transform: "translateY(-50px) rotate(-5deg)" },
+          "100%": { opacity: 1, transform: "translateY(0) rotate(-2deg)" },
         },
         "tape-drop": {
           "0%": { opacity: 0, transform: "translateY(-30px) scale(1.1)" },

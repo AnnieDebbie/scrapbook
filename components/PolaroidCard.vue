@@ -1,9 +1,9 @@
 <template>
-  <div class="relative w-max h-auto">
+  <div :class="`${containerClass} relative w-max h-auto`">
     <!-- Tape -->
 
     <div
-      :class="`${containerClass} relative bg-white shadow-xl p-4 transform origin-top  w-max h-max animate-polaroid-entry `"
+      :class="`${polaroidClass} relative bg-white shadow-xl p-4 transform origin-top w-max h-max animate-polaroid-entry`"
     >
       <div class="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg">
         <img :src="image" alt="photo" :class="imgClass" class="object-cover" />
@@ -17,20 +17,26 @@
     </div>
 
     <div
-      class="absolute -top-4 left-1/2 -translate-x-1/2 w-[70px] h-[20px] bg-[#E5D1A9] opacity-70 rounded-sm shadow-md rotate-[-40deg] z-20 animate-tape-drop"
+      class="absolute -top-4 left-1/2 -translate-x-1/2 w-[70px] h-[20px] bg-[#E5D1A9] opacity-70 rounded-sm shadow-md rotate-[-40deg] z-20 opacity-0 animate-fade-in animate-tape-drop"
+      :style="{ animationDelay: tapeDelay }"
     ></div>
   </div>
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   image: String,
   caption: String,
   imgClass: String,
   containerClass: String,
+  polaroidClass: String,
   captionClass: String,
-  baseDelay: String,
+  baseDelay: {
+    type: Number,
+    default: 0,
+  },
 });
+const tapeDelay = `${props.baseDelay + 400}ms`;
 </script>
 
 <style scoped>
