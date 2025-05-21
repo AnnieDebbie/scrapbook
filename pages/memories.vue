@@ -1,5 +1,9 @@
 <template>
-  <section class="scrapbook-wrapper">
+  <section class="scrapbook-wrapper overflow-hidden">
+    <div class="absolute top-0 -right-[100px]">
+      <img src="/images/clipped-newspaper.png" class="w-[300px] z-10" />
+      <img src="/images/leaves.png" class="max-w-[300px] z-20" />
+    </div>
     <div
       v-if="pageEntered"
       class="min-h-screen pb-12 pt-8 overflow-hidden opacity-0 animate-fade-in delay-[400ms]"
@@ -31,7 +35,7 @@
         <div class="grid grid-cols-2 md:flex gap-32 mt-14">
           <PolaroidCard
             @click="flipped = true"
-            image="/images/home-image-1.jpeg"
+            image="/images/memories-img-one.jpeg"
             imgClass="max-w-[372.174px] h-[248.146px] "
             containerClass="cursor-pointer delay-[1000ms] z-40 "
             polaroidClass="rotate-[-10deg]"
@@ -40,7 +44,7 @@
           />
           <PolaroidCard
             @click="flipped = true"
-            image="/images/home-image-1.jpeg"
+            image="/images/memories-img-two.jpeg"
             imgClass="max-w-[372.174px] h-[248.146px] "
             containerClass="cursor-pointer delay-[1000ms] z-40 "
             polaroidClass="rotate-[12deg]"
@@ -57,11 +61,11 @@
         </div>
 
         <div
-          class="flex font-caveat mt-40 items-end gap-6 ml-10 opacity-0 animate-fade-in delay-[3200ms]"
+          class="flex font-caveat mt-40 items-end gap-6 ml-10 opacity-0 animate-fade-in delay-[3300ms]"
         >
           <PolaroidCard
             @click="flipped = true"
-            image="/images/home-image-4.png"
+            image="/images/memories-img-four.jpeg"
             imgClass="max-w-[200.174px] h-[248.146px]"
             containerClass="cursor-pointer delay-[3200ms] z-20 "
             polaroidClass=""
@@ -70,7 +74,7 @@
           />
 
           <p
-            class="text-[29.99px] font-normal leading-[112%] w-[250px] max-w-[400px] pb-4 opacity-0 animate-drop-in delay-[3500ms]"
+            class="text-[29.99px] font-normal leading-[112%] w-[250px] max-w-[400px] pb-4 animate-drop-in delay-[3500ms]"
           >
             You make me feel seen, loved and
             <span class="text-[#9F5A5A]">valued </span>
@@ -79,49 +83,62 @@
       </section>
 
       <div
-        class="px-20 grid grid-cols-2 md:flex mt-10 text-[#2F2E2E] font-caveat text-xl font-bold leading-[22.882px] text-shadow-[0px_4.192px_10.481px_rgba(0,0,0,0.12)] opacity-0 animate-fade-in delay-[4300ms]"
+        class="pl-48 pr-10 grid grid-cols-2 md:flex mt-5 text-[#2F2E2E] font-caveat text-xl font-bold leading-[22.882px] text-shadow-[0px_4.192px_10.481px_rgba(0,0,0,0.12)] opacity-0 animate-fade-in delay-[5000ms]"
       >
         <div class="flex gap-5 items-start rotate-[-5deg]">
           <PolaroidCard
             @click="flipped = true"
-            image="/images/home-image-4.png"
+            image="/images/memories-img-five.jpeg"
             imgClass="max-w-[200.174px] h-[248.146px]"
-            containerClass="cursor-pointer  z-20"
-            polaroidClass=" -ml-7"
+            containerClass="cursor-pointer delay-[5500ms] z-20"
+            polaroidClass=" "
             captionClass=""
-            :baseDelay="3500"
+            :baseDelay="5500"
           />
 
           <p
-            class="text-[29.99px] font-normal leading-[112%] text-[#691313] mt-4 w-max max-w-[250px]"
+            class="text-[29.99px] font-normal leading-[112%] text-[#691313] mt-4 w-max max-w-[250px] animate-float-up"
           >
             You love me in a way that feels like a warm hug on a cold day
           </p>
         </div>
-        <div class="flex items-center mt-8 gap-5 rotate-[-2deg]">
+        <div class="flex items-center mt-12 gap-5 ml-5 rotate-[-2deg]">
           <PolaroidCard
             @click="flipped = true"
-            image="/images/home-image-4.png"
+            image="/images/memories-img-six.jpeg"
             imgClass="max-w-[200.174px] h-[248.146px]"
-            containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3500ms] z-20"
+            containerClass="cursor-pointer opacity-0 animate-fade-in delay-[5800ms] z-20"
             polaroidClass=" -ml-7"
             captionClass=""
-            :baseDelay="3500"
+            :baseDelay="5800"
           />
 
           <p
-            class="text-[29.99px] font-normal leading-[112%] text-black w-max max-w-[200px]"
+            class="text-[29.99px] font-normal leading-[112%] text-black w-max max-w-[200px] animate-float-up delay-[6000ms]"
           >
             Thank you for the small things and making my heart feel at home
           </p>
         </div>
-        <div class="rotate-[2deg]">
-          <img src="/images/memories-img-3.jpeg" class="min-w-[354px]" />
+        <div
+          class="rotate-[2deg] ml-10 mt-14 opacity-0 animate-polaroid-entry delay-[6200ms]"
+        >
+          <img
+            src="/images/memories-img-seven.png"
+            class="min-w-[290px] w-[300px]"
+          />
 
           <p class="text-[29.99px] font-normal leading-[112%] text-[#674A4A]">
             I love your calm voice
           </p>
         </div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div
+        class="absolute -top-[270px] w-[313.639px] h-[810.116px] left-[-40px] opacity-0 animate-fade-in delay-[4200ms]"
+      >
+        <img src="/images/flower.png" alt="" />
       </div>
     </div>
   </section>

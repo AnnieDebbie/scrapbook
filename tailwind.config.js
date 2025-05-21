@@ -64,14 +64,15 @@ module.exports = {
         "drop-in": {
           "0%": {
             transform: "translateY(-200px) rotate(-15deg)",
-            opacity: "0",
+            opacity: 0,
           },
           "60%": {
             transform: "translateY(30px) rotate(10deg)",
-            opacity: "1",
+            opacity: 0.5,
           },
           "100%": {
             transform: "translateY(0) rotate(0deg)",
+            opacity: 1,
           },
         },
 
@@ -114,6 +115,21 @@ module.exports = {
             opacity: 1,
           },
         },
+
+        "float-up": {
+          "0%": {
+            transform: "translateY(200px) scale(0.8)",
+            opacity: 0,
+          },
+          "60%": {
+            transform: "translateY(-10px) scale(1.05)",
+            opacity: 0.8,
+          },
+          "100%": {
+            transform: "translateY(0px) scale(1)",
+            opacity: 1,
+          },
+        },
       },
       animation: {
         "polaroid-entry": "polaroid-entry 1s ease-out forwards",
@@ -125,6 +141,7 @@ module.exports = {
         heartbeat: "heartbeat 1.2s ease-in-out infinite",
         "page-flip": "page-flip 1s ease-in-out forwards",
         "page-unflip": "page-unflip 1s ease-in-out forwards",
+        "float-up": "float-up 1s ease-out forwards",
       },
     },
   },
