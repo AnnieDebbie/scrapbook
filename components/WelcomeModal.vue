@@ -39,14 +39,14 @@
     <!-- <audio ref="musicRef" src="/audio/bg-music.mp3" muted preload="auto" loop /> -->
 
     <!-- <audio id="bg-music" src="/audio/bg-music.mp3" preload="auto" loop></audio> -->
-
+    <!-- 
     <button
       v-if="musicBlocked"
       @click="playMusicManually"
       class="mt-4 text-[#5E4630]"
     >
       Click here to start the music 🎵
-    </button>
+    </button> -->
   </div>
 </template>
 

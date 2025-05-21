@@ -147,7 +147,7 @@
 <script setup>
 import { inject, onMounted } from "vue";
 
-const pageEntered = inject("pageEntered");
+const pageEntered = inject("pageEntered", true);
 const images = [
   { id: 1, src: "img1.jpg", caption: "First trip" },
   { id: 2, src: "img2.jpg", caption: "Cuddles!" },
