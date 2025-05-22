@@ -25,7 +25,7 @@
             v-for="(img, i) in polaroids"
             :key="i"
             :src="img.src"
-            class="absolute object-cover border-4 border-white p-3 bg-white shadow-lg animate-polaroid-drop z-50"
+            class="polaroid-animated absolute object-cover border-4 border-white p-3 bg-white shadow-lg animate-polaroid-drop z-50"
             :style="{
               left: img.left,
               top: img.top,
@@ -35,7 +35,6 @@
               zIndex: `${img.zIndex}`,
               objectFit: 'cover',
               maxHeight: '350px',
-              opacity: 0,
             }"
           />
         </div>
@@ -191,5 +190,9 @@ const polaroids = [
 }
 .animate-lights-twinkle {
   animation: lights-twinkle 2.5s infinite linear;
+}
+
+.polaroid-animated {
+  opacity: 0;
 }
 </style>
