@@ -25,7 +25,7 @@
             v-for="(img, i) in polaroids"
             :key="i"
             :src="img.src"
-            class="absolute object-cover border-4 border-white p-3 bg-white shadow-lg opacity-0 animate-polaroid-drop z-50"
+            class="absolute object-cover border-4 border-white p-3 bg-white shadow-lg animate-polaroid-drop z-50"
             :style="{
               left: img.left,
               top: img.top,
@@ -35,6 +35,7 @@
               zIndex: `${img.zIndex}`,
               objectFit: 'cover',
               maxHeight: '350px',
+              opacity: 0,
             }"
           />
         </div>
@@ -54,7 +55,7 @@
     <div
       class="absolute bottom-0 left-0 z-50 cursor-pointer group opacity-0 animate-fade-in delay-[5000ms]"
     >
-      <router-link to="/notes" class="">
+      <router-link to="/notes" class="fixed bottom-0 left-0">
         <div class="relative w-20 h-20">
           <div
             class="absolute bottom-0 right-0 w-20 h-20 bg-[#F5EED8] rounded-tr-3xl shadow-lg group-hover:bg-yellow-300 transition-colors duration-300"
