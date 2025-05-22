@@ -163,8 +163,6 @@
 </template>
 
 <script setup lang="ts">
-import WelcomeModal from "../components/WelcomeModal.vue";
-
 const router = useRouter();
 
 const showModal = ref(true);
@@ -172,6 +170,12 @@ const showModal = ref(true);
 function startMainAnimations() {
   showModal.value = false;
 }
+
+onMounted(() => {
+  if (localStorage.getItem("modalShown") === "true") {
+    showModal.value = false;
+  }
+});
 </script>
 
 <style>

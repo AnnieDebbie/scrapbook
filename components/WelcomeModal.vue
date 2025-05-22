@@ -58,10 +58,10 @@ const { playMusic } = useBackgroundMusic();
 
 function openEnvelope() {
   opened.value = true;
-
   setTimeout(() => {
     playMusic();
     show.value = false;
+    localStorage.setItem("modalShown", "true");
     emit("done");
   }, 900);
 }

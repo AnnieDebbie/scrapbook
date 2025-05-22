@@ -154,10 +154,10 @@
       </div>
 
       <div
-        class="absolute bottom-8 left-8 cursor-pointer opacity-0 animate-fade-in delay-[5000ms]"
+        class="fixed bottom-8 left-8 z-50 cursor-pointer group opacity-0 animate-fade-in delay-[5000ms]"
       >
-        <router-link to="/" class="fixed bottom-0 left-0 z-50">
-          <div class="relative w-20 h-20 group cursor-pointer">
+        <router-link to="/">
+          <div class="relative w-20 h-20">
             <div
               class="absolute bottom-0 right-0 w-20 h-20 bg-[#F5EED8] rounded-tr-3xl shadow-lg group-hover:bg-yellow-300 transition-colors duration-300"
             ></div>
