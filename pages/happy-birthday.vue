@@ -42,12 +42,12 @@
     </section>
 
     <div
-      class="absolute left-1/2 top-[70%] -translate-x-1/2 z-50 opacity-0 animate-sticker-pop-in delay-[4000ms]"
+      class="absolute left-1/2 top-[50%] -translate-x-1/2 z-50 opacity-0 animate-sticker-pop-in delay-[4000ms]"
     >
       <img
         src="/images/birthday-sticker.png"
         alt="Birthday Sticker"
-        class="w-[220px] mx-auto"
+        class="w-[300px] mx-auto"
       />
     </div>
 
