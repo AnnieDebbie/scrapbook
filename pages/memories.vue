@@ -149,6 +149,23 @@
           class="opacity-0 animate-bloom delay-[5000ms]"
         />
       </div>
+
+      <div
+        class="absolute bottom-8 left-8 z-50 cursor-pointer group opacity-0 animate-fade-in delay-[5000ms]"
+      >
+        <router-link to="/notes" class="">
+          <div class="relative w-20 h-20">
+            <div
+              class="absolute bottom-0 right-0 w-20 h-20 bg-[#F5EED8] rounded-tr-3xl shadow-lg group-hover:bg-yellow-300 transition-colors duration-300"
+            ></div>
+            <span
+              class="absolute bottom-2 left-4 font-caveat text-lg text-pink-700 rotate-[10deg] group-hover:underline"
+            >
+              Previous Page
+            </span>
+          </div>
+        </router-link>
+      </div>
       <div
         class="absolute -top-[270px] w-[313.639px] h-[810.116px] left-[-40px] opacity-0 animate-fade-in delay-[5200ms]"
       >
