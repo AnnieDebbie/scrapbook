@@ -36,9 +36,6 @@
       </p>
     </div>
 
-    <!-- <audio ref="musicRef" src="/audio/bg-music.mp3" muted preload="auto" loop /> -->
-
-    <!-- <audio id="bg-music" src="/audio/bg-music.mp3" preload="auto" loop></audio> -->
     <!-- 
     <button
       v-if="musicBlocked"
@@ -51,14 +48,19 @@
 </template>
 
 <script setup>
+import { useBackgroundMusic } from "../composables/useBackgroundMusic";
+
 const show = ref(true);
 const opened = ref(false);
 const emit = defineEmits(["done"]);
+
+const { playMusic } = useBackgroundMusic();
 
 function openEnvelope() {
   opened.value = true;
 
   setTimeout(() => {
+    playMusic();
     show.value = false;
     emit("done");
   }, 900);
