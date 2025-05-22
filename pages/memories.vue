@@ -1,10 +1,13 @@
 <template>
   <section class="scrapbook-wrapper overflow-hidden">
     <div class="absolute top-0 -right-[100px]">
-      <img src="/images/clipped-newspaper.png" class="w-[500px] z-10" />
+      <img
+        src="/images/clipped-newspaper.png"
+        class="relative w-[500px] z-20"
+      />
       <img
         src="/images/leaves.png"
-        class="max-w-[300px] z-20 absolute top-4 right-24 animate-sway delay-[1200ms]"
+        class="max-w-[300px] z-10 absolute top-10 animate-sway delay-[1200ms] right-24"
       />
     </div>
     <div
@@ -151,10 +154,10 @@
       </div>
 
       <div
-        class="absolute bottom-8 left-8 cursor-pointer group opacity-0 animate-fade-in delay-[5000ms]"
+        class="absolute bottom-8 left-8 cursor-pointer opacity-0 animate-fade-in delay-[5000ms]"
       >
-        <router-link to="/" class="fixed bottom-0 right-0 z-50">
-          <div class="relative w-20 h-20">
+        <router-link to="/" class="fixed bottom-0 left-0 z-50">
+          <div class="relative w-20 h-20 group cursor-pointer">
             <div
               class="absolute bottom-0 right-0 w-20 h-20 bg-[#F5EED8] rounded-tr-3xl shadow-lg group-hover:bg-yellow-300 transition-colors duration-300"
             ></div>

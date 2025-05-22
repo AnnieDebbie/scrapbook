@@ -132,9 +132,9 @@ module.exports = {
           },
         },
         sway: {
-          "0%": { transform: "rotate(-4deg)" },
-          "50%": { transform: "rotate(4deg)" },
-          "100%": { transform: "rotate(-4deg)" },
+          "0%": { transform: "rotate(-8deg)" },
+          "50%": { transform: "rotate(8deg)" },
+          "100%": { transform: "rotate(-8deg)" },
         },
 
         "leaf-fall": {
