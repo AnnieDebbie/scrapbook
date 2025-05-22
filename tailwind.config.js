@@ -3,7 +3,7 @@ const animate = require("tailwindcss-animate");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  safelist: ["dark"],
+  safelist: ["dark", "animate-polaroid-drop"],
   prefix: "",
 
   theme: {
@@ -172,15 +172,15 @@ module.exports = {
         "polaroid-drop": {
           "0%": {
             opacity: "0",
-            transform: "translateY(-120px) scale(1.15))",
+            transform: "translateY(-120px) scale(1.15)",
           },
           "80%": {
             opacity: "1",
-            transform: "translateY(16px) scale(1.05))",
+            transform: "translateY(16px) scale(1.05)",
           },
           "100%": {
             opacity: "1",
-            transform: "translateY(0) scale(1))",
+            transform: "translateY(0) scale(1)",
           },
         },
 
