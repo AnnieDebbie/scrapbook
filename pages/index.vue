@@ -1,9 +1,9 @@
 <template>
   <div>
-    <WelcomeModal @done="startMainAnimations" />
+    <WelcomeModal v-if="showModal" @done="startMainAnimations" />
 
     <section
-      v-show="!showModal"
+      v-if="!showModal"
       class="min-h-screen py-12 overflow-hidden opacity-0 animate-fade-in delay-200ms"
     >
       <section
@@ -164,13 +164,10 @@
 
 <script setup lang="ts">
 const router = useRouter();
-
 const showModal = ref(true);
-
 function startMainAnimations() {
   showModal.value = false;
 }
-
 onMounted(() => {
   if (localStorage.getItem("modalShown") === "true") {
     showModal.value = false;

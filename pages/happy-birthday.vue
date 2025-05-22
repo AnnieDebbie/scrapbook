@@ -20,10 +20,10 @@
       class="bg-[url('/images/happy-birthday-bg.png')] h-full bg-no-repeat bg-cover min-h-screen mt-32 relative z-50 flex items-center justify-center mx-20"
     >
       <div class="mt-32 w-[1000px] h-[700px] mx-auto max-h-max">
-        <div class="max-w- max-h">
+        <div class="">
           <img
             v-for="(img, i) in polaroids"
-            :key="img.src"
+            :key="i"
             :src="img.src"
             class="absolute object-cover border-4 border-white p-3 bg-white shadow-lg opacity-0 animate-polaroid-drop z-50"
             :style="{
@@ -52,7 +52,7 @@
     </div>
 
     <div
-      class="absolute bottom-8 left-8 z-50 cursor-pointer group opacity-0 animate-fade-in delay-[5000ms]"
+      class="absolute bottom-0 left-0 z-50 cursor-pointer group opacity-0 animate-fade-in delay-[5000ms]"
     >
       <router-link to="/notes" class="">
         <div class="relative w-20 h-20">
@@ -190,9 +190,5 @@ const polaroids = [
 }
 .animate-lights-twinkle {
   animation: lights-twinkle 2.5s infinite linear;
-}
-
-.font-caveat {
-  font-family: "Caveat", cursive;
 }
 </style>

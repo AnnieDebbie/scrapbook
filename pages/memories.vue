@@ -154,7 +154,7 @@
       </div>
 
       <div
-        class="fixed bottom-8 left-8 z-50 cursor-pointer group opacity-0 animate-fade-in delay-[5000ms]"
+        class="fixed bottom-0 left-0 z-50 cursor-pointer group opacity-0 animate-fade-in delay-[5000ms]"
       >
         <router-link to="/">
           <div class="relative w-20 h-20">
