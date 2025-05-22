@@ -1,9 +1,14 @@
 <template>
   <WelcomeModal @done="startMainAnimations" />
+
   <section
     v-show="!showModal"
     class="min-h-screen py-12 overflow-hidden opacity-0 animate-fade-in delay-200ms"
   >
+    <video controls="" autoplay="" name="media" class="hidden">
+      <source src="/audio/bg-music.mp3" type="audio/mpeg" />
+    </video>
+
     <section
       class="flex items-center justify-between container mx-auto opacity-0 animate-fade-in delay-[5000ms]"
     >
@@ -109,10 +114,10 @@
             image="/images/home-image-2.png"
             caption="...helping me believe in magic "
             imgClass="min-w-[180.174px] max-w-[372.174px]  h-[248.146px]"
-            containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3300ms] z-30"
+            containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3700ms] z-30"
             polaroidClass="rotate-[7deg] -ml-4"
             captionClass=" "
-            :baseDelay="3300"
+            :baseDelay="3700"
           />
 
           <PolaroidCard
@@ -120,10 +125,10 @@
             image="/images/home-image-4.png"
             caption="...being my supporter & safe space "
             imgClass="max-w-[200.174px] h-[248.146px]"
-            containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3500ms] z-20"
+            containerClass="cursor-pointer opacity-0 animate-fade-in delay-[4100ms] z-20"
             polaroidClass="rotate-[-5deg] -ml-7"
             captionClass=""
-            :baseDelay="3500"
+            :baseDelay="4100"
           />
 
           <PolaroidCard
@@ -131,10 +136,11 @@
             image="/images/home-image-1.jpeg"
             caption="...the hugs, cuddles & forehead kisses"
             imgClass="max-w-[372.174px] h-[248.146px] "
-            containerClass="cursor-pointer opacity-0 animate-fade-in delay-[3700ms] z-10"
+            containerClass="cursor-pointer opacity-0 animate-fade-in delay-[4500ms] z-10"
             polaroidClass="rotate-[-10deg] "
             captionClass=""
-            :baseDelay="3700"
+            :baseDelay="4500"
+          />
           />
         </div>
       </section>
@@ -142,12 +148,12 @@
 
     <div class="relative">
       <div
-        class="absolute -top-[100px] w-[313.639px] h-[810.116px] left-0 opacity-0 animate-fade-in delay-[4200ms]"
+        class="absolute -top-[100px] w-[313.639px] h-[810.116px] left-0 opacity-0 animate-fade-in delay-[4700ms]"
       >
         <img src="/images/home-page-footer-img-1.png" alt="" />
       </div>
       <div
-        class="absolute -top-[100px] w-[313.639px] h-[810.116px] right-0 opacity-0 animate-fade-in delay-[4500ms]"
+        class="absolute -top-[100px] w-[313.639px] h-[810.116px] right-0 opacity-0 animate-fade-in delay-[5000ms]"
       >
         <img
           class="overflow-hidden"
@@ -160,9 +166,17 @@
 </template>
 
 <script setup lang="ts">
+import WelcomeModal from "../components/WelcomeModal.vue";
+
 const router = useRouter();
 const route = useRoute();
 const flipped = ref(false);
+
+const showModal = ref(true);
+
+function startMainAnimations() {
+  showModal.value = false;
+}
 </script>
 
 <style>

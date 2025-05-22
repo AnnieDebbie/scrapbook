@@ -36,21 +36,29 @@
       </p>
     </div>
 
-    <audio ref="musicRef" :src="musicSrc" preload="auto" loop />
+    <!-- <audio ref="musicRef" src="/audio/bg-music.mp3" muted preload="auto" loop /> -->
+
+    <!-- <audio id="bg-music" src="/audio/bg-music.mp3" preload="auto" loop></audio> -->
+
+    <button
+      v-if="musicBlocked"
+      @click="playMusicManually"
+      class="mt-4 text-[#5E4630]"
+    >
+      Click here to start the music 🎵
+    </button>
   </div>
 </template>
 
 <script setup>
 const show = ref(true);
 const opened = ref(false);
-const musicRef = ref(null);
 const emit = defineEmits(["done"]);
-const musicSrc = "/audio/bg-music-free-use.mp3"; // replace with your music file path
 
 function openEnvelope() {
   opened.value = true;
+
   setTimeout(() => {
-    musicRef.value?.play();
     show.value = false;
     emit("done");
   }, 900);
