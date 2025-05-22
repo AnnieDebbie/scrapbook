@@ -148,6 +148,23 @@
         />
       </div>
     </div>
+
+    <div
+      class="absolute -top-[270px] w-[313.639px] h-[810.116px] left-[-40px] opacity-0 animate-fade-in delay-[5200ms]"
+    >
+      <router-link to="/happy-birthday" class="fixed bottom-0 right-0 z-50">
+        <div class="relative w-20 h-20 cursor-pointer group">
+          <div
+            class="absolute bottom-0 right-0 w-20 h-20 bg-[#F5EED8] rounded-tr-3xl shadow-lg group-hover:bg-yellow-300 transition-colors duration-300"
+          ></div>
+          <span
+            class="absolute bottom-2 right-4 font-caveat text-lg text-pink-700 rotate-[-10deg] group-hover:underline"
+          >
+            Next Page
+          </span>
+        </div>
+      </router-link>
+    </div>
   </section>
 </template>
 

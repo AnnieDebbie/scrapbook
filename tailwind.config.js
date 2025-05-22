@@ -170,6 +170,22 @@ module.exports = {
           "30%": { opacity: "1", transform: "scale(1.2) translateY(-10px)" },
           "100%": { opacity: "0", transform: "scale(1) translateY(-60px)" },
         },
+        "polaroid-drop": {
+          "0%": {
+            opacity: "0",
+            transform:
+              "translateY(-120px) scale(1.15) )",
+          },
+          "80%": {
+            opacity: "1",
+            transform:
+              "translateY(16px) scale(1.05) )",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0) scale(1) )",
+          },
+        },
       },
       animation: {
         "polaroid-entry": "polaroid-entry 1s ease-out forwards",
@@ -188,6 +204,7 @@ module.exports = {
         blink: "blink 1s steps(1) infinite",
         "kiss-peck": "kissPeck 1.2s cubic-bezier(.4,2,.6,1) 4",
         "heart-float": "heartFloat 1.2s 0.6s forwards",
+        "polaroid-drop": "polaroid-drop 0.9s cubic-bezier(.4,2,.6,1) forwards",
       },
     },
   },
