@@ -15,30 +15,6 @@ module.exports = {
       },
     },
     extend: {
-      backgroundImage: {
-        none: "none",
-        "gradient-to-t": "linear-gradient(to top, var(--tw-gradient-stops))",
-        "gradient-to-tr":
-          "linear-gradient(to top right, var(--tw-gradient-stops))",
-        "gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",
-        "gradient-to-br":
-          "linear-gradient(to bottom right, var(--tw-gradient-stops))",
-        "gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
-        "gradient-to-bl":
-          "linear-gradient(to bottom left, var(--tw-gradient-stops))",
-        "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
-        "gradient-to-tl":
-          "linear-gradient(to top left, var(--tw-gradient-stops))",
-        "gradient-166": "linear-gradient(24deg, var(--tw-gradient-stops))",
-        "gradient-94": "linear-gradient(94deg, var(--tw-gradient-stops))",
-        "gradient-180": "linear-gradient(180deg, var(--tw-gradient-stops))",
-      },
-      borderRadius: {
-        xl: "calc(var(--radius) + 4px)",
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
       fontFamily: {
         caveat: ["Caveat", "cursive"],
         handwritten: ['"Patrick Hand"', "cursive"],

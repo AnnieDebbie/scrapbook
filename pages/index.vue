@@ -6,6 +6,41 @@
       v-if="!showModal"
       class="min-h-screen py-12 overflow-hidden opacity-0 animate-fade-in delay-200ms"
     >
+      <button
+        @click="musicStarted ? pauseMusic() : playMusic()"
+        class="fixed top-32 left-5 z-50 flex items-center gap-2 px-5 py-3 rounded-full shadow-lg border-2 border-[#BFA181] bg-[#F5EED8] hover:bg-[#EAD7C2] transition-all opacity-0 animate-fade-in delay-[5000ms]"
+      >
+        <svg
+          v-if="!musicStarted"
+          class="w-6 h-6 text-[#BFA181] animate-bounce"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 19V6l12-2v13"
+          ></path>
+          <circle cx="6" cy="18" r="3" fill="currentColor" />
+          <circle cx="18" cy="16" r="3" fill="currentColor" />
+        </svg>
+        <svg
+          v-else
+          class="w-6 h-6 text-[#BFA181]"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <rect x="6" y="6" width="4" height="12" rx="1" fill="currentColor" />
+          <rect x="14" y="6" width="4" height="12" rx="1" fill="currentColor" />
+        </svg>
+        <span class="font-caveat text-lg text-[#7A5C36]">
+          {{ musicStarted ? "Pause Music" : "Play Music" }}
+        </span>
+      </button>
       <section
         class="flex items-center justify-between container mx-auto opacity-0 animate-fade-in delay-[5000ms]"
       >
@@ -159,12 +194,32 @@
         </div>
       </div>
     </section>
+
+    <div
+      class="absolute -top-[270px] w-[313.639px] h-[810.116px] left-[-40px] opacity-0 animate-fade-in delay-[5200ms]"
+    >
+      <router-link to="/memories" class="fixed bottom-0 right-0 z-50">
+        <div class="relative w-20 h-20 cursor-pointer group">
+          <div
+            class="absolute bottom-0 right-0 w-20 h-20 bg-[#F5EED8] rounded-tr-3xl shadow-lg group-hover:bg-yellow-300 transition-colors duration-300"
+          ></div>
+          <span
+            class="absolute bottom-2 right-4 font-caveat text-lg text-pink-700 rotate-[-10deg] group-hover:underline"
+          >
+            Next Page
+          </span>
+        </div>
+      </router-link>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { useBackgroundMusic } from "../composables/useBackgroundMusic";
+
 const router = useRouter();
 const showModal = ref(true);
+const { playMusic, musicStarted, pauseMusic } = useBackgroundMusic();
 function startMainAnimations() {
   showModal.value = false;
 }
