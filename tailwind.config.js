@@ -163,7 +163,6 @@ module.exports = {
           "0%": { transform: "scale(1) rotate(-8deg)", opacity: "1" },
           "30%": { transform: "scale(1.2) rotate(0deg)", opacity: "1" },
           "60%": { transform: "scale(1) rotate(8deg)", opacity: "1" },
-          "100%": { transform: "scale(0.7) translateY(-40px)", opacity: "0" },
         },
         heartFloat: {
           "0%": { opacity: "0", transform: "scale(0.5) translateY(0)" },
