@@ -25,7 +25,7 @@
             v-for="(img, i) in polaroids"
             :key="img.src"
             :src="img.src"
-            class="absolute object-cover border-4 border-white p-3 bg-white shadow-lg animate-polaroid-drop z-50"
+            class="absolute object-cover border-4 border-white p-3 bg-white shadow-lg opacity-0 animate-polaroid-drop z-50"
             :style="{
               left: img.left,
               top: img.top,
@@ -41,15 +41,19 @@
       </div>
     </section>
 
-    <!-- Festive Message -->
-    <div class="mt-20 text-center z-60 absolute">
-      <img src="/images/birthday-sticker.png" alt="" />
+    <div
+      class="absolute left-1/2 top-[70%] -translate-x-1/2 z-50 opacity-0 animate-sticker-pop-in delay-[4000ms]"
+    >
+      <img
+        src="/images/birthday-sticker.png"
+        alt="Birthday Sticker"
+        class="w-[220px] mx-auto"
+      />
     </div>
   </section>
 </template>
 
 <script setup>
-// In <script setup>
 const polaroids = [
   {
     src: "/images/final-img-1.jpeg",

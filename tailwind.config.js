@@ -173,17 +173,30 @@ module.exports = {
         "polaroid-drop": {
           "0%": {
             opacity: "0",
-            transform:
-              "translateY(-120px) scale(1.15) )",
+            transform: "translateY(-120px) scale(1.15) )",
           },
           "80%": {
             opacity: "1",
-            transform:
-              "translateY(16px) scale(1.05) )",
+            transform: "translateY(16px) scale(1.05) )",
           },
           "100%": {
             opacity: "1",
             transform: "translateY(0) scale(1) )",
+          },
+        },
+
+        "sticker-pop-in": {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.7) rotate(-8deg)",
+          },
+          "70%": {
+            opacity: "1",
+            transform: "scale(1.1) rotate(2deg)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1) rotate(0deg)",
           },
         },
       },
@@ -202,9 +215,11 @@ module.exports = {
         "leaf-fall": "leaf-fall 2.5s cubic-bezier(.4,2,.6,1) forwards",
         bloom: "bloom 1.2s cubic-bezier(.4,2,.6,1) forwards",
         blink: "blink 1s steps(1) infinite",
-        "kiss-peck": "kissPeck 1.2s cubic-bezier(.4,2,.6,1) 4",
+        "kiss-peck": "kissPeck 1.2s cubic-bezier(.4,2,.6,1) infinite",
         "heart-float": "heartFloat 1.2s 0.6s forwards",
         "polaroid-drop": "polaroid-drop 0.9s cubic-bezier(.4,2,.6,1) forwards",
+        "sticker-pop-in":
+          "sticker-pop-in 0.8s cubic-bezier(.4,2,.6,1) forwards",
       },
     },
   },
