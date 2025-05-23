@@ -196,7 +196,7 @@
     </section>
 
     <div
-      class="absolute -top-[270px] w-[313.639px] h-[810.116px] left-[-40px] opacity-0 animate-fade-in delay-[5200ms]"
+      class="absolute -top-0 right-0 opacity-0 animate-fade-in delay-[5200ms]"
     >
       <router-link to="/memories" class="fixed bottom-0 right-0 z-50">
         <div class="relative w-20 h-20 cursor-pointer group">
